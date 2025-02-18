@@ -17,11 +17,11 @@ const installJava = () => {
   let command;
 
   if (os.platform() === "win32") {
-    command = "winget install EclipseAdoptium.Temurin.17.JRE";
+    command = "winget install --id=Microsoft.OpenJDK.8";
   } else if (os.platform() === "darwin") {
-    command = "brew install openjdk@17";
+    command = "brew install openjdk@8";
   } else {
-    command = "sudo apt update && sudo apt install -y openjdk-17-jre";
+    command = "sudo apt update && sudo apt install -y openjdk-8-jdk";
   }
 
   console.log(`🚀 Instalando Java con: ${command}`);
@@ -31,7 +31,7 @@ const installJava = () => {
       console.error(`❌ Error al instalar Java: ${error.message}`);
       return;
     }
-    console.log(`✅ Java instalado correctamente.`);
+    console.log("✅ Java 8 instalado correctamente.");
   });
 };
 
