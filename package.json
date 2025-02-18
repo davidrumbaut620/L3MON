@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
+    "install-java": "node install-java.js",
+    "postinstall": "node install-java.js"
   },
   "author": "D3VL",
   "license": "ISC",
